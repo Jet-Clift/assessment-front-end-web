@@ -1,0 +1,39 @@
+console.log("hello world");
+
+const colorBtn = document.getElementById("color");
+const placeBtn = document.getElementById("place");
+const ritualBtn = document.getElementById('ritual');
+const imageElement = document.getElementById('melvin');
+
+function handleSubmit(evt) {
+    evt.preventDefault();
+    alert("Form has been submitted successfully.");
+}
+
+function alertFavColor(evt) {
+    evt.preventDefault();
+    alert("My favorite color is purple.");
+}
+
+function alertFavPlace(evt) {
+    evt.preventDefault();
+    alert("My favorite place is the gym.");
+}
+
+function alertFavRitual(evt) {
+    evt.preventDefault();
+    alert("My favorite ritual is eating cereal every morning.");
+}
+
+let form = document.querySelector('#contact');
+form.addEventListener('submit', handleSubmit);
+
+function complimentFromMelvin(evt) {
+    evt.preventDefault();
+    alert("Hi, I'm Melvin, and you smell nice :3");
+}
+
+imageElement.addEventListener('mouseover', complimentFromMelvin);
+colorBtn.addEventListener('mouseover', alertFavColor);
+placeBtn.addEventListener('click', alertFavPlace);
+ritualBtn.addEventListener('click', alertFavRitual);
